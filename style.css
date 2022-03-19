@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  background-color: #8d8dff;
+  height: 100vh;
+}
+aside > h1 {
+  text-align: center;
+}
+aside > .user {
+  display: flex;
+  flex-direction: row;
+}
+aside > .user > img {
+  width: 30px;
+  height: 30px;
+  margin: auto 10px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}

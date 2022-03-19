@@ -1,0 +1,19 @@
+{
+  "name": "managertask",
+  "version": "1.0.0",
+  "description": "application for tasks",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Povasin/managerTask.git"
+  },
+  "author": "Povasin K.A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Povasin/managerTask/issues"
+  },
+  "homepage": "https://github.com/Povasin/managerTask#readme"
+}

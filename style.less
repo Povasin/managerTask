@@ -3,13 +3,28 @@ body{
     display: flex;
     flex-direction: row;
     margin: 0;
+    position: relative;
+}
+.d-row{
+    display: flex;
+    flex-direction: row;
+
+    & > #handalAside{
+        margin-left: auto;
+        
+    }
+
 }
 
 // Боковая панель
-aside{
+#aside{
+    transition: 1s;
+    left: 0;
+    top: 0;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 17%;
     background-color: rgb(141, 141, 255);
     height: 100vh;
 
@@ -30,8 +45,23 @@ aside{
 }
 
 // Главный блок
-main{
-    display: flex;
+#main{
+    transition: 1s;
+    display: flex;  
+    left: 17%;
+    top: 0;
+    position: absolute;
     flex-direction: column;
-    width: 90%;
+    width: 83%;
+    height: 100vh;
+}
+
+.notify{
+    display: none;
+    height: 200px;
+    background-color: bisque;
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }

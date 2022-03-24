@@ -1,0 +1,39 @@
+// Боковая панель
+#aside{
+    transition: left 1s;
+    left: 0;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    background-color: rgb(141, 141, 255);
+    height: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    .aside-top{
+        display: flex;
+        flex-direction: row;
+
+        .title{
+            font-size: 25px;
+            text-decoration: none;
+        }
+    }
+
+    .menu{
+        margin-top: 20px;
+    }
+
+    &>.user{
+        display: flex;
+        flex-direction: row;
+    
+        &>img{
+            width: 30px;
+            height: 30px;
+            margin: auto 10px;
+        }
+    }
+}

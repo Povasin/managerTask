@@ -1,19 +1,38 @@
-const ManeTasks = ["попкин а. г.", "пупкин а. г.", "бобкин а. г.", "жопкин а. г." , "копкин а. г." ]
-const ManeText = ["купить арбузов и бананов и помидоров", "Подскажите, как в таком случае можно корректировать координаты, если всё вбито", "в строку Интересует замена 50 obj.style.transform", "попоп оппо окпо щощ пкр пшко пфоп пщш офуоп тищвжпш отфщкцп"]
+const ManeTasks = [
+    {
+        name: "попкин а. г.",
+        text:"купить арбузов и бананов и помидоров",
+        date:"21 marth"
+    },
+    {
+        name: "пупкин ф.ю",
+        text:"купить арбузов и бананов и помидоров",
+        date:"21 marth"
+    },
+    {
+        name:"залупкин ф.",
+        text:"купить арбузов и бананов и помидоров",
+        date:"21 marth"
+    },
+    {
+        name:"халупкин ф.",
+        text:"купить арбузов и бананов и помидоров",
+        date:"21 marth"
+    }
+]
 const searchHTML = document.querySelector("#search")
 const tasksHTML = document.querySelector(".tasks") 
-let tasks__text = document.querySelector("tasks__text")
 
 function render(mass) {
     tasksHTML.innerHTML = ""
     mass.forEach(task => {
         tasksHTML.insertAdjacentHTML("beforeend", ` <div class="tasks__item">
-        <p class="tasks__name">${task}</p>
-        <p class="tasks__text"></p>
-        <p class="tasks__date">21 марта</p>
+        <p class="tasks__name">${task.name}</p>
+        <p class="tasks__text">${task.text}</p>
+        <p class="tasks__date">${task.date}</p>
         <p class="openTasks">></p>
     </div>`)
-    });
+    }); 
 }
 
 render(ManeTasks)
@@ -28,21 +47,23 @@ searchHTML.addEventListener("input", ()=>{
     })
     render(filterTasks)
 })
-//надо проверить некоректно работает
 let openTasks = document.querySelector(".openTasks")
 let showTask = false
 tasksHTML.addEventListener("click",e=>{
-    // let clientHight = tasks__text.clientHeight
-    if (e.target.className = "openTasks") {
+    console.log(e.path[1]);     
+    if (e.target.className == "openTasks") {
         if (!showTask) {
-            openTasks.style.transform = 'rotate(' + 90 + 'deg)';
-            tasks__item.style.height = 200 + "px"
+            e.target.style.transform = 'rotate(' + 90 + 'deg)';
+            e.path[1].style.height = 200 + "px"
             showTask = !showTask
         } else{
-            tasks__item.style.height = 53 + "px"
-            openTasks.style.transform = 'rotate(' + 90 + 'deg)';
+            e.path[1].style.height = 100+ "px"
+            e.target.style.transform = 'rotate(' + 0 + 'deg)';
             showTask = !showTask
         }
     }
 })
+
+
+
 

@@ -1,5 +1,11 @@
 // Боковая панель
+@font-face{
+    font-family: main-aside;
+    src: url("/managerTask/fonts/static/RedHatMono-Medium.ttf");
+}
+
 #aside{
+    margin-top: 10px;
     transition: left 1s;
     left: 0;
     top: 0;
@@ -7,10 +13,11 @@
     display: flex;
     flex-direction: column;
     width: 17%;
-    background-color: rgb(141, 141, 255);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     padding: 20px 10px;
     box-sizing: border-box;
+    font-family: main-aside;
 
     .aside-top{
         display: flex;
@@ -19,21 +26,69 @@
         .title{
             font-size: 25px;
             text-decoration: none;
+            margin: auto;
+            color: black;
+        }
+        #handlAside{
+            padding: 0;
+            margin: auto;
+            margin-right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            font-size: 32px;
+            transition: 1s;
+            transform: rotate(0deg);
         }
     }
 
     .menu{
         margin-top: 20px;
+        .menu-item:nth-child(1){
+            background-color:#F3F3FB ;
+        }
+        .menu-item{
+            display: flex;
+            flex-direction: row;
+            height: 68px;
+            border-radius: 20%;
+            background-color: white;
+           
+            img{
+                
+                width: 12%;
+                object-fit: cover;
+                margin: auto 10px ;
+            }   
+            a{
+                font-size: 22px;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                margin: auto 10px;
+            }
+        }
     }
 
     &>.user{
         display: flex;
         flex-direction: row;
+        font-size: 22px;
     
         &>img{
             width: 30px;
             height: 30px;
             margin: auto 10px;
+        }
+    }
+    .logo{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        background-color: #4654EB;
+        p{
+            margin: 10px 15px;
         }
     }
 }

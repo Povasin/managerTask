@@ -9,7 +9,7 @@ function render(mass) {
     mass.forEach(task => {
         tasksHTML.insertAdjacentHTML("beforeend", ` <div class="tasks__item">
         <p class="tasks__name">${task}</p>
-        <p class="tasks__text"> fwefweffwef</p>
+        <p class="tasks__text"></p>
         <p class="tasks__date">21 марта</p>
         <p class="openTasks">></p>
     </div>`)

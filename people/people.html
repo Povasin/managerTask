@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/aside.css">
+    <link rel="stylesheet" href="../people/css/people.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <aside id="aside">
+        <div class="aside-top">
+            <div class="logo"><p>M</p></div>
+            <a class="title" href="../../index.html">ManagerTask</a>
+            <button id="handlAside"><</button>
+        </div>
+       
+        <nav class="menu">
+            <div class="menu_item">
+                <img src="../../img/tasks.png">
+                <a href="../pages/Tasks/tasks.html">Задачи</a>
+            </div>
+            <div class="menu_item">
+                <img src="../../img/chat.png" alt="">
+                <a  href="../chat/chat.html">Чат</a>
+            </div>
+            <div class="menu_item active">
+                <img src="../../img/people.png" alt="">
+                <a class="a active" href="../../people/people.html">Сотрудники</a>
+            </div>
+            <div class="menu_item">
+                <img src="../../img/calendar 1.png" alt="">
+                <a href="#">Календарь</a>
+            </div>
+        </nav>
+        <div class="user">
+            <img src="../img/avatar.png" alt="аватар пользователя">
+            <a href="../user/user.html" class="a">Повасин К.А.</a>
+        </div>
+    </aside>
+    <main id="main">
+        <div class="d-row">
+            <img src="../../img/search.png" >
+            <input id="search" type="text" placeholder="search user" maxlength="25">
+            <img class="userMAIN" src="../../img/userMAIN.png" alt="">
+        </div>
+        <div class="staff">
+            <p>отдел 1</p>
+            <p>направление 1</p>
+            <div class="staff__people">
+                <div class="staff__people__user">
+                    <img src="../img/avatar.png">
+                    <p class="user__name">you</p>
+                </div>
+                <div class="staff__people__user">
+                    <img src="../img/avatar.png">
+                    <p class="user__name">пупкин ф.ю</p>
+                </div>
+                <div class="staff__people__user">
+                    <img src="../img/avatar.png">
+                    <p class="user__name">залупкин ф.ф</p>
+                </div>
+                <div class="staff__add">
+                    <img src="../img/add 2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/aside.js"></script>
+</body>
+</html>

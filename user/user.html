@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/aside.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../user/css/user.css">
+</head>
+<body>
+    <aside id="aside">
+        <div class="aside-top">
+            <div class="logo"><p>M</p></div>
+            <a class="title" href="../../index.html">ManagerTask</a>
+            <button id="handlAside"><</button>
+        </div>
+       
+        <nav class="menu">
+            <div class="menu_item">
+                <img src="../img/tasks.png">
+                <a class="a" href="../pages/Tasks/tasks.html">Задачи</a>
+            </div>
+            <div class="menu_item">
+                <img src="../img/chat.png" alt="">
+                <a class="a" href="../chat/chat.html">Чат</a>
+            </div>
+            <div class="menu_item">
+                <img src="../img/people.png" alt="">
+                <a class="a" href="../people/people.html">Сотрудники</a>
+            </div>
+            <div class="menu_item">
+                <img src="../img/calendar 1.png" alt="">
+                <a class="a" href="#">Календарь</a>
+            </div>
+        </nav>
+        <div class="user active">
+            <img src="../img/avatar.png" alt="аватар пользователя">
+            <a href="#" class="a active">Повасин К.А.</a>
+        </div>
+    </aside>
+    <main id="main">
+        <div class="main__obert">
+            <div class="photo">
+                <div class="img__obert">
+                    <img src="../img/avatar.png">
+                </div>
+                <a href="#" id="redaction">редактировать</a>
+            </div>
+            <div class="information">
+                <div class="main__information">
+                        <p> <span id="surname">фамилия</span> <span id="name">Имя</span></p>
+                        <p class="discription">мини описание: <span id="discriptionSpan"></span></p>
+                        <p id="online">online</p>
+                </div>
+                <div class="information__name">
+                    <div class="birthday">
+                        <p>день рождение:</p>
+                        <p class="birthday__date">00.00.00</p>
+                    </div>
+                    <div class="family">
+                        <p>семейное положние:</p>
+                        <p class="family__text">не указано</p>
+                    </div>
+                    <div class="school">
+                        <p>образование:</p>
+                        <p class="school__text">не указано</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/user.js"></script>
+    <script src="../js/aside.js"></script>
+</body>
+</html>
+
+
+

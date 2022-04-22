@@ -1,0 +1,201 @@
+// Главный блок
+@font-face{
+    font-family: main-aside;
+    src: url("../../../fonts/static/RedHatMono-Medium.ttf");
+}
+.btn{
+    height: 10%;
+}
+#addTask{
+    span{
+        font-size: 30px;
+        margin: auto 10px;
+    }
+    p{
+        font-size: 20px;
+        margin: auto 5px;
+    }
+    position: absolute;
+    left: 20px;
+    bottom: 2%;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+#addTask:hover{
+    background-color: #4654EB;
+    color: white;
+}
+.d-row{
+    display: flex;
+    flex-direction: row;
+    #search{
+        border: none;
+        background-color: #eeeefc;
+        margin: 30px 0;
+        font-size: 20px;
+        width: 20%;
+        border-bottom: 1px solid black;
+        border-radius: 0;
+        color: gray;
+    }
+    img{
+        object-fit: cover;
+        width: 40px;
+        margin: auto 20px;
+    }
+    .userMAIN{
+        position: absolute;
+        right: 20px;
+        top: 25px;  
+        width: 60px !important;
+    }
+}
+
+.tasks{
+    height: 90%;
+}
+.tasks__item{
+    border-radius: 20px;
+    background-color: white;
+    margin:20px;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    transition: 1s;
+    .tasks__name{
+        margin: 20px;
+        margin-left: 20px;
+        font-size: 20px;
+        width: 10%;
+    }
+    .tasks__text{
+        margin: 20px 10px;
+        font-size: 18px;
+        width: 70%;
+        height:  40px;
+        white-space: nowrap; 
+        overflow:hidden; 
+        text-overflow: ellipsis;    
+        transition: 1s;
+    }
+    .tasks__date{
+        margin: 20px;
+        font-size: 20px;
+        width: 10%;
+    }
+    .openTasks{
+        margin: auto 0;
+        border: none;
+        background-color: #e3e3fa00;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 30px;
+        transition: 1s;
+    }
+    .removeTasks{
+        cursor: pointer;
+        margin: 24px;
+    }
+}
+
+#notify{
+    display: none;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    position: fixed;
+    bottom: 0;
+    right: 18px;
+    border-radius: 20px;  
+    flex-direction: column;
+    transition: 1s;
+    font-size: 20px;
+    .newMessage{
+        background-color: #4654EB;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        border-radius: 15px 15px 0 0;
+        p{
+            margin: 10px;
+            color: white;
+        }
+        #closeMessage{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            border: none;
+            background-color: #4654EB;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .p{
+        margin:10px;
+    }
+    .sendHTML{
+        display: none;
+        flex-direction: row;
+        margin-top: 40px;
+        #sendDate{
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        #send{
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 0;
+            margin-left: 10px;
+            transition: 0.5s;
+        }
+        #send:hover{
+            background-color: #4654EB;
+            color: white;
+        }
+    }
+}   
+input{
+    margin: 7px 10px;
+    width: 97%;
+    font-size: 18px;
+    background-color: #eeeefc;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    padding: 7px 0;
+}
+input:hover{
+    background-color: #4654EB;
+    color: white;
+}
+.active__task{
+    .tasks__text{
+        height:  180px;
+        white-space: normal; 
+        overflow:visible; 
+        text-overflow: clip;   
+    }   
+}
+
+.tasks__item:hover{
+    background-color: #4654EB;
+    transition: 0.5s;
+    .tasks__name, 
+    .tasks__date, 
+    .tasks__text,
+    .openTasks,
+    .removeTasks{
+        color: white;
+        transition: 0.3s;
+    }
+}

@@ -1,7 +1,7 @@
 // Боковая панель
 @font-face{
     font-family: main-aside;
-    src: url("/managerTask/fonts/static/RedHatMono-Medium.ttf");
+    src: url("../fonts/static/RedHatMono-Medium.ttf");
 }
 
 #aside{
@@ -18,6 +18,7 @@
     padding: 20px 10px;
     box-sizing: border-box;
     font-family: main-aside;
+    position: fixed;
 
     .aside-top{
         display: flex;
@@ -38,40 +39,49 @@
             font-size: 32px;
             transition: 1s;
             transform: rotate(0deg);
+            cursor: pointer;
         }
     }
 
     .menu{
         margin-top: 20px;
-        .menu-item:nth-child(1){
-            background-color:#F3F3FB ;
-        }
-        .menu-item{
+        .menu_item{
             display: flex;
             flex-direction: row;
             height: 68px;
-            border-radius: 20%;
+            border-radius: 20px;
             background-color: white;
-           
+            transition: 0.5s;
             img{
                 
                 width: 12%;
                 object-fit: cover;
                 margin: auto 10px ;
             }   
-            a{
-                font-size: 22px;
-                color: rgb(0, 0, 0);
-                text-decoration: none;
-                margin: auto 10px;
-            }
         }
+    }
+    .active{
+        background-color:#eeeefc !important;
+        .a{
+            color: #4654EB; 
+            text-decoration:none;
+        }
+    }
+    a{
+        font-size: 22px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin: auto 10px;
+        text-decoration: none;
     }
 
     &>.user{
         display: flex;
         flex-direction: row;
         font-size: 22px;
+        height: 68px;
+        border-radius: 20px;
+        background-color: white;
     
         &>img{
             width: 30px;

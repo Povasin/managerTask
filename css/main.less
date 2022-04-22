@@ -1,8 +1,3 @@
-// Главный блок
-@font-face{
-    font-family: main-aside;
-    src: url("/managerTask/fonts/static/RedHatMono-Medium.ttf");
-}
 #main{
     font-family: main-aside;
     margin: 20px;
@@ -13,93 +8,8 @@
     position: absolute;
     flex-direction: column;
     width: 81%;
-    height: 100%;
-    background-color: #e3e3fa;
-    border-radius: 5%;
-    #addTask{
-        span{
-            font-size: 30px;
-            margin: auto 10px;
-        }
-        p{
-            font-size: 20px;
-            margin:  12px;
-        }
-        position: absolute;
-        left: 20px;
-        bottom: 20px;
-        height: 50px;
-        width: 200px;
-        display: flex;
-        flex-direction: row;
-        background-color: white;
-        border: none;
-        border-radius: 20%;
-    }
-    .d-row{
-        display: flex;
-        flex-direction: row;
-        #search{
-            border: none;
-            background-color: #F3F3FB;
-            margin: 30px 0;
-            font-size: 20px;
-        }
-        img{
-            object-fit: cover;
-            width: 40px;
-            margin: auto 20px;
-        }
-        .userMAIN{
-            position: absolute;
-            right: 20px;
-            top: 20px;  
-            width: 60px !important;
-        }
-    }
-
-}
-.tasks__item{
-    border-radius: 10%;
-    background-color: white;
-    margin:20px;
-    display: flex;
-    flex-direction: row;
-    .tasks__name{
-        margin: auto 20px;
-        margin-left: 20px;
-        font-size: 20px;
-        width: 15%;
-    }
-    .tasks__text{
-        margin: auto 10px;
-        font-size: 18px;
-        width: 65%;
-        height:  40px;
-    }
-    .tasks__date{
-        margin: auto 20px;
-        font-size: 20px;
-        width: 10%;
-    }
-    .openTasks{
-        margin: auto 0;
-        border: none;
-        background-color: #e3e3fa00;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        font-size: 30px;
-        transition: 1s;
-    }
-}
-
-#notify{
-    display: none;
-    height: 200px;
-    background-color: bisque;
-    width: 40%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    min-height: 100%;
+    background-color: #eeeefc;
+    border-radius: 45px;
+    padding-bottom: 100px;
 }

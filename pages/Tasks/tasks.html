@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="../../css/aside.css">
+    <link rel="stylesheet" href="../Tasks/css/tasks.css">
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 <body>
@@ -18,36 +18,38 @@
         </div>
        
         <nav class="menu">
-            <div class="menu-item">
-                <img src="/managerTask/img/tasks.png">
-                <a href="#">Задачи</a>
+            <div class="menu_item active">
+                <img src="../../img/tasks.png">
+                <a class="a active" href="#">Задачи</a>
             </div>
-            <div class="menu-item">
-                <img src="/managerTask/img/chat.png" alt="">
-                <a href="/managerTask/chat.html">Чат</a>
+            <div class="menu_item">
+                <img src="../../img/chat.png" alt="">
+                <a class="a" href="../../chat/chat.html">Чат</a>
             </div>
-            <div class="menu-item">
-                <img src="/managerTask/img/people.png" alt="">
-                <a href="#">Сотрудники</a>
+            <div class="menu_item">
+                <img src="../../img/people.png" alt="">
+                <a class="a" href="../../people/people.html">Сотрудники</a>
             </div>
-            <div class="menu-item">
-                <img src="/managerTask/img/calendar 1.png" alt="">
-                <a href="#">Календарь</a>
+            <div class="menu_item">
+                <img src="../../img/calendar 1.png" alt="">
+                <a class="a" href="#">Календарь</a>
             </div>
         </nav>
         <div class="user">
             <img src="../../img/avatar.png" alt="аватар пользователя">
-            <p>Повасин К.А.</p>
-        </div>
+            <a href="../../user/user.html" class="a">Повасин К.А.</a>
+        </div>  
     </aside>
     <main id="main">
         <div class="d-row">
-            <img src="/managerTask/img/search.png" >
-            <input id="search" type="text" placeholder="search name">
-            <img class="userMAIN" src="/managerTask/img/userMAIN.png" alt="">
+            <img src="../../img/search.png" >
+            <input id="search" type="text" placeholder="search name" maxlength="25">
+            <img class="userMAIN" src="../../img/userMAIN.png" alt="">
         </div>
         <div class="tasks"></div>
-        <button id="addTask"><span>+</span> <p>написать</p></button>
+        <div class="btn">
+            <button id="addTask"><span>+</span> <p>написать</p></button>
+        </div>
     </main>
     <script type="module" src="./js/search.js"></script>
     <script type="module" src="../../js/aside.js"></script>

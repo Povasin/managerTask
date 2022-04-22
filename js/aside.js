@@ -1,6 +1,7 @@
 const handlAsideHTML = document.querySelector("#handlAside")
 const asideHTML = document.querySelector("#aside")
 const mainHTML = document.getElementById("main")
+const menuHTML = document.querySelector(".menu")
 //закрывающая открывающая aside
 let showAside = true
 handlAsideHTML.addEventListener("click",()=>{

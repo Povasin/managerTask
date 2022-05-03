@@ -60,11 +60,11 @@ redactionHTML.addEventListener("click", () => {
     descriptionJS = document.querySelector('.descriptionJS')
     birthdayJS = document.querySelector(".birthdayJS")
     errorHTML = document.querySelectorAll(".error")
-    familyJS = document.querySelector("familyJS")
+    familyJS = document.querySelector(".familyJS")
     obertJS = document.querySelector(".obertJS")
     openRedaction.addEventListener("click", () => {
-        if (checkCount(surnameJS, surnameHTML, 0) == true && checkCount(nameJS, nameHTML, 1) == true && checkCount(descriptionJS, discriptionSpan, 2) == true && checkCount(birthdayJS, birthday__date, 3) == true && checkCount(familyJS, family__text, 4) == true) {
-            obertJS.innerHTML = `<div class="main__obert">
+        if (checkCount(surnameJS, 0) && checkCount(nameJS,1)&& checkCount(descriptionJS,  2) && checkCount(birthdayJS, 3)&& checkCount(familyJS, 4)) {
+            main__obert.innerHTML = `
             <div class="photo">
                 <div class="img__obert">
                     <img src="../img/avatar.png">
@@ -73,41 +73,39 @@ redactionHTML.addEventListener("click", () => {
             </div>
             <div class="information">
                 <div class="main__information">
-                        <p> <span id="surname">фамилия</span> <span id="name">Имя</span></p>
-                        <p class="discription">мини описание: <span id="discriptionSpan"></span></p>
+                        <p> <span id="surname">${surnameJS.value}</span> <span id="name">${nameJS.value}</span></p>
+                        <p class="discription">мини описание: <span id="discriptionSpan">${descriptionJS.value}</span></p>
                         <p id="online">online</p>
                 </div>
                 <div class="information__name">
                     <div class="birthday">
                         <p>день рождение:</p>
-                        <p class="birthday__date">00.00.00</p>
+                        <p class="birthday__date">${birthdayJS.value}</p>
                     </div>
                     <div class="family">
                         <p>семейное положние:</p>
-                        <p class="family__text">не указано</p>
+                        <p class="family__text">${familyJS.value}</p>
                     </div>
                     <div class="school">
                         <p>образование:</p>
                         <p class="school__text">не указано</p>
                     </div>
                 </div>
-            </div>
-        </div>`
+            </div>`
         } else {
-            checkCount(surnameJS, surnameHTML, 0)
+            checkCount(surnameJS, 0)
             checkCount(nameJS, nameHTML, 1)
-            checkCount(descriptionJS, discriptionSpan, 2)
-            checkCount(birthdayJS, birthday__date, 3)
-            checkCount(familyJS, family__text, 4)
+            checkCount(descriptionJS, 2)
+            checkCount(birthdayJS, 3)
+            checkCount(familyJS, 4)
         }
     })
 })
 
 //проверка полей
-function checkCount(inputJS, inputHTML, index) {
+function checkCount(inputJS,index) {
     //не может прочитать value
     if (inputJS.value != "") {
-        inputHTML.innerHTML = inputJS.value
         errorHTML[index].innerHTML = ''
         return true
     } else {
@@ -115,8 +113,6 @@ function checkCount(inputJS, inputHTML, index) {
         return false
     }
 }
-
-
 
 
 

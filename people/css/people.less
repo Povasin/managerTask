@@ -39,7 +39,7 @@
     .staff__add{
         width: 120px;
         img{
-            margin: 40px auto;
+            margin: 63px auto;
             width: 40%;
             object-fit: cover;
             cursor: pointer;
@@ -81,6 +81,10 @@
     }
 }
 
+.staff__obert{
+    display: flex;
+    flex-direction: row;
+}
 .staff:hover{
     background-color: #4654EB;
     p{
@@ -88,5 +92,98 @@
     }
     .staff__people__user{
         background-color: white;
+    }
+}
+#notify{
+    display: flex;
+    height: 270px;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    position: fixed;
+    bottom: 0;
+    right: 18px;
+    border-radius: 20px;  
+    flex-direction: column;
+    transition: 1s;
+    font-size: 20px;
+    .newMessage{
+        background-color: #4654EB;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        border-radius: 15px 15px 0 0;
+        p{
+            margin: 10px;
+            color: white;
+        }
+        #closeMessage{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            border: none;
+            background-color: #4654EB;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    .p{
+        margin:10px;
+    }
+    .sendHTML{
+        display: flex;
+        flex-direction: row;
+        #sendDate{
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        #send{
+            font-size: 18px;
+            border-radius: 10px;
+            border: none;
+            margin: 10px 0;
+            margin-left: 10px;
+            transition: 0.5s;
+        }
+        #send:hover{
+            background-color: #4654EB;
+            color: white;
+        }
+    }
+}   
+input{
+    margin: 7px 10px;
+    width: 97%;
+    font-size: 18px;
+    background-color: #eeeefc;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    padding: 7px 0;
+}
+input:hover{
+    background-color: #4654EB;
+    color: white;
+}
+.active__task{
+    .tasks__text{
+        height:  180px;
+        white-space: normal; 
+        overflow:visible; 
+        text-overflow: clip;   
+    }   
+}
+
+.tasks__item:hover{
+    background-color: #4654EB;
+    transition: 0.5s;
+    .tasks__name, 
+    .tasks__date, 
+    .tasks__text,
+    .openTasks,
+    .removeTasks{
+        color: white;
+        transition: 0.3s;
     }
 }

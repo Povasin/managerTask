@@ -8,7 +8,6 @@ addTaskBtn.addEventListener('click', ()=>{
 })
 send.addEventListener('click', ()=>{
     myNotify.addNotify()
-    console.log(myNotify.ManeTasks);
     render(JSON.parse(localStorage.getItem("maneTasks")) )
 })
   

@@ -3,8 +3,18 @@ const staff__people= document.querySelector(".staff__people")
 const ManePeople = ["you", "пупкин ф.ю", "залупкин ф.ф"]
 
 if (!JSON.parse(localStorage.getItem("ManePeople"))) {
-    localStorage.setItem("ManePeople", JSON.stringify(staff__people))    
+    localStorage.setItem("ManePeople", JSON.stringify(ManePeople))    
 }
+function render(mass) {
+    staff__people.innerHTML = ''
+    mass.forEach(user => {
+        staff__people.insertAdjacentHTML("beforeEnd", `<div class="staff__people__user">
+        <img src="../img/avatar.png">
+        <p class="user__name">${user}</p>
+    </div>`)
+    });
+}
+render(JSON.parse(localStorage.getItem("ManePeople")))
 staff__img.addEventListener("click", ()=>{
     document.querySelector('.body').insertAdjacentHTML('beforeend', `<div id="notify">
     <div class="newMessage">
@@ -26,22 +36,14 @@ staff__img.addEventListener("click", ()=>{
     closeMessage.addEventListener("click",()=>{
         notify.style.display = "none"
     })
-    function render(mass) {
-        mass.forEach(user => {
-            staff__people.insertAdjacentHTML("beforeEnd", `<div class="staff__people__user">
-            <img src="../img/avatar.png">
-            <p class="user__name">${user}</p>
-        </div>`)
-        });
-    }
     render(JSON.parse(localStorage.getItem("ManePeople")))
-    function JSON() {
+    function myJSON() {
         const JSONuser = JSON.parse(localStorage.getItem("ManePeople")) 
         JSONuser.push(who.value)
         localStorage.setItem("ManePeople", JSON.stringify(JSONuser))
     }
     send.addEventListener("click", ()=>{
-        JSON()
+        myJSON()
         render(JSON.parse(localStorage.getItem("ManePeople")))
     })
 })
